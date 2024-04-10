@@ -1,0 +1,97 @@
+﻿<Window x:Class="WPF_Application.Control_database"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Application"
+        mc:Ignorable="d"
+        Title="Control_database" Height="670" Width="1280" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Name="mainTabeControl" Grid.ColumnSpan="3">
+            <TabItem Name="maindatagrid" Header="Просмотр данных">
+
+                <StackPanel>
+
+                    <Grid>
+
+                        <DataGrid Name="dataGrid" Grid.Row="0" FontSize="14" Height="400" Margin="0 0 0 0" AutoGenerateColumns="False" IsReadOnly="True" HorizontalContentAlignment="Stretch" MaxHeight="530" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding id}"/>
+                                <DataGridTextColumn Header="ФИО" Binding="{Binding FIO}"/>
+                                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Date_Birth}"/>
+                                <DataGridTextColumn Header="Пол" Binding="{Binding Gender}"/>
+                                <DataGridTextColumn Header="Адрес" Binding="{Binding Adress}"/>
+                                <DataGridTextColumn Header="Место рождения" Binding="{Binding Place_Birth}"/>
+                                <DataGridTextColumn Header="ИНН" Binding="{Binding INN}"/>
+                                <DataGridTextColumn Header="Номер страховки" Binding="{Binding Insurance_number}"/>
+                                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}"/>
+                                <DataGridTextColumn Header="Семейное положение" Binding="{Binding Family_status}"/>
+                                <DataGridTextColumn Header="Дополнительная информация" Binding="{Binding Additional_information}"/>
+                                <DataGridTextColumn Header="Место работы" Binding="{Binding Place_Work}"/>
+                                <DataGridTextColumn Header="Номер избирательного участка" Binding="{Binding Polling_station_number}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Grid Margin="0,20,0,0">
+                        <Button Margin="10,0,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="20" Width="70" HorizontalAlignment="left" Click="Button_Ins" Content="Изменить"></Button>
+                        <Button Margin="90,0,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="20" Width="70" HorizontalAlignment="Left" Click="Button_Upd" Content="Обновить" VerticalAlignment="Top" ></Button>
+                        <Button Margin="170,0,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="20" Width="70" HorizontalAlignment="left" Click="Button_Add" Content="Добавить"></Button>
+                        <Button Margin="250,0,0,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Height="20" Width="70" HorizontalAlignment="left" Click="Button_Del" Content="Удалить"></Button>
+                    </Grid>
+
+                </StackPanel>
+
+            </TabItem>
+
+            <TabItem Name="rn" Header="Отчеты">
+                <StackPanel Margin="0,0,853,0"> 
+                    
+                    <Grid Margin="0 10 0 10">
+                        <Label Content="Отчет по номеру избирательного участка" FontSize="20"></Label>
+                    </Grid>
+                    <Grid>
+                        <Label Content="Номер участка"></Label>
+                        <TextBox Name="Nomer_Ychastok_TB" Margin="118,0,0,0"></TextBox>
+                    </Grid>
+                    <Grid Margin="25 25 25 60">
+                        <Button Content="Создать отчет" Click="Create_report_1"></Button>
+                    </Grid>
+
+                    <Grid Margin="0 10 0 10">
+                        <Label Content="Отчет по семейному положению" FontSize="20"></Label>
+                    </Grid>
+                    <Grid>
+                        <Label Content="Семейное положение"></Label>
+                        <ComboBox x:Name="CBFamaly" Margin="137,0,0,0">
+                            <ComboBox.ItemsSource>
+                                <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                    <sys:String>Женат</sys:String>
+                                    <sys:String>Холост</sys:String>
+                                    <sys:String>Не замужем</sys:String>
+                                    <sys:String>Вдова</sys:String>
+                                    <sys:String>Вдовец</sys:String>
+                                    <sys:String>Разведена</sys:String>
+                                    <sys:String>Разведен</sys:String>
+                                </x:Array>
+                            </ComboBox.ItemsSource>
+                        </ComboBox>
+                       
+                    </Grid>
+                    <Grid Margin="25 25 25 25">
+                        <Button Content="Создать отчет" Click="Create_report_2"></Button>
+                    </Grid>
+                </StackPanel>                   
+
+            </TabItem>
+
+        </TabControl>
+
+
+    </Grid>
+</Window>

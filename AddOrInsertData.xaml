@@ -1,0 +1,68 @@
+﻿<Window x:Class="WPF_Application.AddOrInsertData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Application"
+        mc:Ignorable="d"
+        Title="AddOrInsertData" Height="606" Width="480" Activated="Window_Activated">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Label Name="LabelForSwitch" Content="Switch" HorizontalAlignment="Center" FontFamily="Arial Black" FontSize="18"></Label>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="ФИО" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="FIO_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="День рождения" Margin="5,0,0,0"></Label>
+                <DatePicker x:Name="DatePic" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></DatePicker>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Пол" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="Gender_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Адрес" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="Adress_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Место рождение" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="MestoRoj_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="ИНН" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="INN_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Страховка" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="Strah_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Телефон" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="Phone_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Семейный статус" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="Family_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Дополнительная информация" Margin="5,0,0,0"/>
+                <TextBox x:Name="Dop_TB" HorizontalAlignment="Right" Width="250" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Место работы" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="MestoRab_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,5,0,5">
+                <Label HorizontalAlignment="Left" Content="Изб. участок" Margin="5,0,0,0"></Label>
+                <TextBox x:Name="IZB_TB" HorizontalAlignment="Right" Width="350" Margin="0,0,20,0"></TextBox>
+            </Grid>
+            <Grid Margin="0,50,0,5">
+                <Button HorizontalAlignment="Left" Content="Подтвердить" Margin="80,0,0,0" Width="90" Height="25" Click="Click_OK"></Button>
+                <Button HorizontalAlignment="Right" Content="Отмена" Margin="0,0,80,0" Width="80" Click="Click_Return"></Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
